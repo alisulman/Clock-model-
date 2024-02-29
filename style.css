@@ -1,0 +1,123 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid #000;
+    border-radius: 50%;
+    width: 520px;
+    min-height: 520px;
+}
+.mainclock{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00d2fc;
+    border: 2px solid #00e1ff;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    box-shadow: inset 5px 5px 30px #555555,
+    inset -1px -1px 10px #555555;
+    
+}
+.mainclock::before{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    z-index: 10000;
+}
+.mainclock span{
+    position: absolute;
+    inset: 20px;
+    text-align: center;
+    color: #fff;
+    transform: rotate(calc(29.7deg * var(--i)));
+}
+.mainclock span b{
+    position: absolute;
+    font-size: 40px;
+    transform: rotate(calc(-29.7deg * var(--i)));
+    text-shadow: 2px 2px 1px #000;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 330px;
+    height: 330px;
+}
+.handOne{
+    width: 280px;
+    height: 280px;
+}
+.handTwo{
+    width: 200px;
+    height: 200px;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 10px;
+    height: 50%;
+    transform-origin: bottom;
+    border-radius: 100%;
+}
+.hand:nth-child(1) i{
+    width: 4px !important;
+}
+.hand:nth-child(2) i{
+    width: 7px !important;
+}
+.hand2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 230px;
+    height: 230px;
+}
+.handOne2{
+    width: 210px;
+    height: 210px;
+}
+.handTwo2{
+    width: 180px;
+    height: 180px;
+}
+.hand2 i{
+    position: absolute;
+    top: 50%;
+    background-color: var(--clr);
+    width: 4px;
+    height: 15%;
+    transform-origin: bottom;
+    /* border-radius: 100%; */
+}
+.hand:nth-child(1) i{
+    width: 2px;
+}
+.hand:nth-child(2) i{
+    width: 3px;
+}
+
+.gear1{
+    position: absolute;
+    left: 10%;
+}
